@@ -8,7 +8,12 @@ public class Circle {  // Save as "Circle.java"
    private double radius;
    private String color;
    
-   // Constructors (overloaded)
+   @Override
+public String toString() {
+	return "Circle [radius=" + radius + ", color=" + color + "]";
+}
+
+// Constructors (overloaded)
    /** Constructs a Circle instance with default value for radius and color */
    public Circle() {  // 1st (default) constructor
       radius = 1.0;
@@ -21,6 +26,11 @@ public class Circle {  // Save as "Circle.java"
       color = "red";
    }
    
+   public Circle (double r, String c) {
+	radius = r ;
+	color = c ; 
+   }
+   
    /** Returns the radius */
    public double getRadius() {
      return radius; 
@@ -30,4 +40,14 @@ public class Circle {  // Save as "Circle.java"
    public double getArea() {
       return radius*radius*Math.PI;
    }
+   
+   public String getColor() { 
+	   return color ;
+	   }
+   public void setRadius(double newRadius) {
+	   radius = newRadius;
+	}
+   public void setColor(String newColor) { 
+	    color=newColor ;
+	   }
 }
